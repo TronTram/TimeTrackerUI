@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-timer {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  /* Button Components */
+  .btn-primary {
+    @apply bg-blue-600 text-white h-11 px-5 py-3 rounded-lg font-medium text-sm tracking-wide shadow-sm hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-blue-600 text-blue-600 bg-transparent h-11 px-4 py-2 rounded-lg font-medium text-sm tracking-wide hover:bg-blue-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 active:scale-95;
+  }
+
+  /* Large button variants for landing page */
+  .btn-primary-lg {
+    @apply bg-blue-600 text-white px-8 py-4 rounded-lg font-medium text-lg tracking-wide shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 active:scale-95;
+  }
+  
+  .btn-secondary-lg {
+    @apply border-2 border-blue-600 text-blue-600 bg-transparent px-8 py-4 rounded-lg font-medium text-lg tracking-wide hover:bg-blue-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 active:scale-95;
+  }
+  
+  .btn-timer-action {
+    @apply bg-orange-500 text-white h-12 px-6 py-4 rounded-xl font-medium text-base hover:bg-orange-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95;
+  }
+  
+  .btn-icon {
+    @apply w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2;
+  }
+  
+  /* Card Components */
+  .card-standard {
+    @apply bg-white shadow-sm rounded-xl p-5 border border-gray-100;
+  }
+  
+  .card-session {
+    @apply bg-white shadow-md rounded-2xl p-6 border-l-4;
+  }
+  
+  .card-stats {
+    @apply shadow-lg rounded-3xl px-6 py-8;
+  }
+  
+  /* Input Components */
+  .input-standard {
+    @apply h-12 rounded-lg border-2 border-gray-200 bg-white text-gray-900 placeholder-gray-500 px-4 py-3 focus:border-blue-600 focus:outline-none transition-colors duration-150;
+  }
+  
+  .input-timer {
+    @apply h-16 rounded-xl border-2 border-gray-200 font-mono font-medium text-center text-2xl focus:border-blue-600 focus:outline-none transition-colors duration-150;
+  }
+  
+  .input-search {
+    @apply h-11 rounded-full bg-gray-50 border-none px-4 py-3 pl-11 focus:outline-none focus:ring-2 focus:ring-blue-600;
+  }
+  
+  /* Progress Components */
+  .progress-ring {
+    @apply w-32 h-32;
+  }
+  
+  .progress-mini {
+    @apply h-1 rounded-full bg-gray-200 overflow-hidden;
+  }
+  
+  .progress-mini-fill {
+    @apply h-full bg-blue-600 transition-all duration-300 ease-out;
+  }
+  
+  /* Animation Classes */
+  .animate-breathing {
+    animation: breathing 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-timer-pulse {
+    animation: timer-pulse 1s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes breathing {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.02); }
+}
+
+@keyframes timer-pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
